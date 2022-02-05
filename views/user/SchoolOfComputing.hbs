@@ -1,0 +1,21 @@
+<div class="row">
+  {{# each ComputionBoi }}
+    <div class="col-sm-4 py-2">
+      <div class="card">
+        <img class="card-img" src="{{ this.image }}" alt="error loading">
+
+        <div class="card-body">
+          <h4 class="card-title">{{ this.cardTitle }}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">{{ this.cardSubTitle }}</h6>
+          <p class="card-text">
+            {{ this.cardText }} </p>
+
+          <div class="buy d-flex justify-content-between align-items-center">
+            <a href="#" class="btn btn-outline-danger mt-3"><i class="fas fa-book-reader"></i> Add to Shelf </a>
+            <a href="{{ this.bookLink }}" class="btn btn-outline-success"><i class="fas fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/ each }}
+</div>

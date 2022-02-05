@@ -1,0 +1,90 @@
+
+<div class="container">
+
+
+  <section>
+    <div id="quotecarouse" class="carousel slide " data-ride="carousel" data-pause="hover">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="quoteimg">
+            <img src="/images/albert-einstein-3517372_960_720.png">
+          </div>
+
+          <h4 class="quote">“I make it a rule not to clutter my mind with simple information that I can find in a book in five minutes.”</h4>
+
+          <p class="quoter">
+            <em> -Albert Einstein</em>
+          </p>
+        </div>
+
+        <div class="carousel-item">
+          <div class="quoteimg">
+            <img src="/images/kalam_031513014254.png">
+          </div>
+
+          <h4 class="quote">“Learning gives creativity, Creativity leads to thinking, Thinking provides knowledge, Knowledge makes you great.”</h4>
+
+          <p class="quoter">
+            <em> -A.P.J. Abdul Kalam</em>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <div class="quoteimg">
+            <img src="/images/stephen-hawking.png">
+          </div>
+
+          <h4 class="quote">“Nothing is better than reading and gaining more and more knowledge.<br>......................”</h4>
+
+          <p class="quoter">
+            <em> -Stephen Hawking</em>
+          </p>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#quotecarouse" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#quotecarouse" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+
+  </section>
+
+</div>
+
+
+
+<div class="container">
+
+  <div class="headtext">
+
+    <h1> <b> Question Papers </b> </h2>
+
+  </div>
+
+
+  <div class="row">
+    {{# each Qpaper }}
+      <div class="col-sm-4 py-2">
+        <div class="card">
+          <img class="card-img" src="{{ this.image }}" alt="error loading">
+
+          <div class="card-body">
+            <h4 class="card-title">{{ this.cardTitle }}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">{{ this.cardSubTitle }}</h6>
+            <p class="card-text">
+              {{ this.cardText }} </p>
+
+            <div class="buy d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-outline-danger mt-3"><i class="fas fa-book-reader"></i> Add to Shelf </a>
+              <a href="{{ this.bookLink }}" class="btn btn-outline-success"><i class="fas fa-download"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/ each }}
+  </div>
